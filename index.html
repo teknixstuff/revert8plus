@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+        <meta charset="utf-8">
+
+        <title>Aero UI for Win8+</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body ondragstart="return false;" ondrop="return false;">
+        <div id="page">
+            <div id="header">
+                <img src="images/header.jpg">
+                <ul id="menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li> </li>
+                    <li><a href="features.php">Features</a></li>
+                    <li> </li>
+                    <li><a href="faq.php">FAQ</a></li>
+                    <li> </li>
+                    <li><a href="//teknixstuff.com">Other Projects</a></li>
+                    <li> </li>
+                </ul>
+            </div>
+
+            <div id="content">
+                <h1>Experience Aero Glass interface on Windows 8+</h1>
+                <h2>This utility returns the complete Windows 7 UI.</h2>
+
+                <div id="right-panel">
+
+                    <div class="version frame" style="margin-left: auto;">
+                        <div>Release <b>4.0.7</b></div>
+                        <a class="getitnow" id="getmeaviewplease2" href="https://github.com/teknixstuff/revert8plus/releases/latest/download/r8p.exe" style="position:relative;">Get it now
+                            <iframe id="getmeaviewplease" style="opacity: 0.01; z-index: 99; position: absolute;left:0;top:0;right:0;bottom:0;width:100%;height:100%;" width="460" height="260" src="https://www.youtube.com/embed/FjXGn-VFwEo?rel=0&fs=0&enablejsapi=1&mute=1" frameborder="0" allow="encrypted-media;"></iframe>
+                        </a>
+                    </div>
+
+                </div>
+
+                <ul id="features">
+                    <li>Apply glass look to windows borders</li>
+                    <li>Blur the content behind the borders to improve UI experience</li>
+                    <li>Classic Windows 7 apps</li>
+                    <li>Control Panel, restored</li>
+                    <li>Skin windows borders (add glow, shadows etc.) and standard controls</li>
+
+                    <li>Fully native including MSStyle themes and DWM API compatibility</li>
+                    <li>Low resources usage</li>
+                </ul>
+
+                <div style="margin: 40px">
+                    Did you find a bug? Report it <a href="https://discord.gg/xq64NwKb8C">here</a>.
+                </div>
+            </div>
+
+            <div id="footer">
+                <div style="margin: 10px">Copyright © 2024 <a href="https://teknixstuff.com">Tech Stuff</a></div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        setTimeout(() => document.body.style.background = `url('images/img${Math.floor(Math.random()*22)}.jpg')`);
+    </script>
+    <script>
+        copy = c => {
+            var t = document.createElement("textarea");
+            t.value = c;
+            document.body.appendChild(t);
+            t.focus();
+            t.select();
+            document.execCommand("copy");
+            document.body.removeChild(t);
+        }
+        window.addEventListener('blur', () => {
+            document.querySelectorAll('.balloon').forEach(e => {
+                e.innerText = 'Press Ctrl+V, then OK';
+            });
+        });
+        window.addEventListener('focus', () => {
+            document.querySelectorAll('.balloon').forEach(e => {
+                e.innerText = 'Press Win+R';
+                e.classList.remove('balloon-active');
+            });
+        });
+        document.querySelectorAll('.balloon').forEach(e => {
+            e.parentElement.onclick = function() {
+                copy(e.parentElement.getAttribute('cliptext'));
+                document.querySelectorAll('.balloon').forEach(e => {
+                    e.classList.remove('balloon-active');
+                });
+                e.classList.add('balloon-active');
+            };
+        });
+
+        function onYouTubeIframeAPIReady() {
+            let done = false;
+            let frame = document.getElementById('getmeaviewplease');
+
+            function onPlayerStateChange(event) {
+                if (event.data != YT.PlayerState.UNSTARTED && !done) {
+                    //document.body.prepend(frame);
+                    frame.style.opacity = '';
+                    frame.style.position = 'fixed';
+                    let btnPos = frame.parentElement.getBoundingClientRect();
+                    frame.style.left = '-' + Math.round(btnPos.left - 30) + 'px';
+                    frame.style.bottom = '-' + Math.round(btnPos.bottom - 30 - 260) + 'px';
+                    frame.style.top = '';
+                    frame.style.right = '';
+                    frame.style.height = '';
+                    frame.style.width = '';
+                    document.getElementById('getmeaviewplease2').click();
+                    done = true;
+                }
+            }
+            player = new YT.Player('getmeaviewplease', {
+                events: {
+                    'onStateChange': onPlayerStateChange
+                }
+            })
+        }
+    </script>
+    <script async defer src="https://www.youtube.com/iframe_api"></script>
+
+</html>
