@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+
+    <head>
+        <meta charset="utf-8">
+
+        <title>Aero UI for Win8+</title>
+
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body ondragstart="return false;" ondrop="return false;">
+        <div id="page">
+            <div id="header">
+                <img src="images/header.jpg">
+                <ul id="menu">
+                    <li><a href="index.php">Home</a></li>
+                    <li> </li>
+                    <li><a href="features.php">Features</a></li>
+                    <li> </li>
+                    <li><a href="faq.php">FAQ</a></li>
+                    <li> </li>
+                </ul>
+            </div>
+
+            <div id="content">
+                <table class="featdescr">
+                    <tr>
+                        <td>
+                            <h3>Glass look</h3>
+                            Your windows will be rendered with transparent borders. This look allows you to see what is behind the border.
+                            The key element is the blurring of content behind the glass borders to prevent it from being too clear and disturbing.
+                            The result is very smart window border!
+                        </td>
+                        <td>
+                            <div class="preview-right">
+                                <img src="images/p1.png">
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+
+                <table class="featdescr">
+                    <tr>
+                        <td>
+                            <h3>Fully native</h3>
+                            No custom skinning engine used. Due to the native nature of this utility your Windows theme is composited together with the glass effect.
+                            All features controlled through DWM API (e.g. DwmEnableBlurBehindWindow or DwmExtendFrameIntoClientArea) are supported including the taskbar
+                            or custom Start menu blur effect.
+                            <br><br>
+                            Icons, buttons, text boxes, Start menu, taskbar, and most other components will all match the theme selected. No more overlay update failures, app incompatibilities, or out of date operating systems involved.
+                        </td>
+                        <td>
+                            <div class="preview-right">
+                                <img src="images/p2.png" width=300>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <table class="featdescr">
+                    <tr>
+                        <td rowspan="2">
+                            <div class="preview-left">
+                                <img src="images/p3.png">
+                            </div>
+                        </td>
+                        <td>
+                            <h3>Low resources usage!</h3>
+                            This library tries to utilize all DWM resources as much as possible to minimize RAM and VRAM usage.
+                            No redudant objects are created, no background overlay is running.
+                            The result is light-weight library which behaves exactly in the same way as Aero Glass in Windows 7 did. No performance degradation!
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3>Theme your windows!</h3>
+                            You can change the look of your windows borders completely with a custom Windows theme, without patching uxtheme.
+                            This allows you to bring back several effects such as window shadow, caption glow effect, rounded borders or simply change the appearence of caption buttons.
+                            You just modify resources in your favourite styles editor and everything will look as you want!
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+
+            <div id="footer">
+                <div style="margin: 10px">Copyright © 2024 <a href="https://teknixstuff.com">Tech Stuff</a></div>
+            </div>
+        </div>
+
+    </body>
+    <script>
+        setTimeout(() => document.body.style.background = `url('images/img${Math.floor(Math.random()*22)}.jpg')`);
+    </script>
+
+</html>
