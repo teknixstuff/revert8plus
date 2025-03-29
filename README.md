@@ -1,1 +1,1 @@
-Do not link to this page! Please link to [https://r8p.teknixstuff.com](https://r8p.teknixstuff.com) instead.
+Do not link to this page! Please link to [https://teknixstuff.com/Libraries/Projects/Revert8Plus/](https://teknixstuff.com/Libraries/Projects/Revert8Plus/) instead.
